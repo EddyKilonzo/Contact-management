@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/71bcccf63f.js" crossorigin="anonymous"></script>
+    <title>Contact Management System</title>
+</head>
+<body>
+    <main>
+        <div class="left">
+            <h1>Contacts (<span id="contactCount">0</span>)</h1>
+            <input type="search" name="" id="search" placeholder="Search contacts">
+            <ul>
+                <li id="contact" class="contact">
+                    <!-- <div class="upper">
+                        <i class="fa-solid fa-user"></i>
+                        <h2>John Doe</h2>
+                        <div class="icons">
+                            <i id="edit" class="fa-solid fa-pen"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+                    </div>
+                    <div class="down">
+                        <p>+1 (123) 456-7890</p>
+                        <p>email@gmail.com</p>
+                    </div> -->
+
+                </li>
+            </ul>
+
+        </div>
+        <div class="right">
+            <h1> Add Contact</h1>
+            <form id="contactForm" action="">
+                <input type="text" name="" id="name" placeholder="Name" required>
+                <input type="text" name="" id="email" placeholder="Email" required>
+                <input type="text" name="" id="phone" placeholder="Phone" required>
+                <button type="submit">Add Contact</button>
+            </form>
+            <div class="add">
+                <h2>Add contact</h2>
+                <button id="addbutton"><i class="fa-solid fa-address-book"></i>Add contact</button>    
+            </div>
+
+        </div>
+    </main>
+    
+</body>
+<script src="../dist/index.js"></script>
+<script>
+    const addbutton = document.getElementById("addbutton");
+    const form = document.getElementById("contactForm");
+    const add = document.getElementsByClassName("add")[0];
+
+    
+    addbutton.addEventListener("click", () => {
+        form.style.display = "flex";
+        form.style.flexDirection = "column";
+        form.style.gap = "1rem";
+        add.style.display = "none";
+        
+    });
+</script>
+</html>

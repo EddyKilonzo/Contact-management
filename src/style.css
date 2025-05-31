@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(227, 242, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 40px;
+    row-gap: 20px;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.left {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.right {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;  
+}
+.left input {
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+
+} .left input::placeholder {
+    color: #ccc;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 10px 10px 10px rgba(37, 37, 37, 0.14);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+li:hover {
+    background-color: #e0e0e0;
+}
+.right form {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin-top: 20px;
+}
+form input {
+    width: 80%;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-style: italic;
+
+}
+form input::placeholder {
+    color: #0056b3;
+    opacity: 0.4;
+}
+form input:focus {
+    outline: none;
+    border-color: #007BFF;
+    transition: 0.3s all ease-in-out;
+}
+form button {
+    width: 80%;
+    height: 40px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #0056b3;
+    transition: 0.3s all ease-in-out;
+
+}
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 20px;
+    
+}
+.add button {
+    width: 30%;
+    height: 40px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.add button:hover {
+    background-color: #0056b3;
+    transition: 0.3s all ease-in-out;
+}
+.add button i {
+    font-size: 16px;
+    margin-right: 10px;
+}
+ul .contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.contact .upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.contact .down {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px
+}
+.icons {
+    display: flex;
+    gap: 30px;
+}
+.contact .upper h2 {
+    margin-right: 100px;
+    font-size: 18px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #007BFF;
+
+}
+.contact .upper i {
+    color: #007BFF;
+    font-size: 14px;
+    
+}
+.contact .upper .icons .fa-pen {
+    color: #333;
+}
+.contact .upper .icons .fa-trash {
+    color: red;
+}
+.contact .down p {
+    font-size: clamp(12px, 2vw, 13px);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+    .contact .down p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+    form input, form button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+    .contact .upper h2 {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+    .icons {
+        gap: 15px;
+    }
+}
